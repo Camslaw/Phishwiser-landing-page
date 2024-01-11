@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------- Navigation bar classes ---------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+/* Sticky Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: #fff; /* Adjust background color as needed */
+  }
+  
+  /* Responsive Navbar */
+  .navbar-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333; /* Adjust text color as needed */
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Hamburger Menu */
+  @media screen and (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-menu.active {
+      display: block;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      background-color: #333; /* Adjust bar color as needed */
+    }
+  }
+  
+  .fa-fish {
+    background: linear-gradient(90deg, #12d600, #00d334, #00ca6d, #00b9a3, #00a3c2, #008cc2, #007ab3, #0073aa);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 2.75rem;
+    padding-top: 5px;
+}
