@@ -1,0 +1,30 @@
+  /* Hamburger Menu */
+  @media screen and (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-menu.active {
+      display: block;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      background-color: #333; /* Adjust bar color as needed */
+    }
+  }

@@ -18,6 +18,7 @@ body {
 /* Sticky Navbar */
 .navbar {
     position: fixed;
+    height: 70px;
     width: 100%;
     top: 0;
     z-index: 10;
@@ -32,53 +33,22 @@ body {
   }
   
   .navbar-menu {
-    list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links {
-    display: block;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: #333; /* Adjust text color as needed */
+    align-items: center;
   }
   
   .menu-toggle {
     display: none;
   }
-  
-  /* Hamburger Menu */
-  @media screen and (max-width: 768px) {
-    .navbar-menu {
-      display: none;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .navbar-menu.active {
-      display: block;
-    }
-  
-    .menu-toggle {
-      display: block;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      cursor: pointer;
-    }
-  
-    .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      background-color: #333; /* Adjust bar color as needed */
-    }
-  }
+
+  .navbar-links {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
   
   .fa-fish {
     background: linear-gradient(90deg, #12d600, #00d334, #00ca6d, #00b9a3, #00a3c2, #008cc2, #007ab3, #0073aa);
@@ -88,4 +58,77 @@ body {
     -moz-text-fill-color: transparent;
     font-size: 2.75rem;
     padding-top: 5px;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------- Main section classes ------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+.main {
+  background-color: #f1f1f1;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 600px;
+  background-color: #f1f1f1;
+}
+
+.main-text h1 {
+  font-size: 1.75rem;
+  color: black;
+  background-color: #f1f1f1;
+}
+
+.main-text p {
+  margin-top: 2.3rem;
+  margin-bottom: 2.3rem;
+  font-size: 1.25rem;
+  color: black;
+  background-color: #f1f1f1;
+}
+
+.main-btn {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #12d600, #00ce5a, #00c288, #00b5aa, #00a7bf, #0096c5, #0085bd, #0073aa);
+  padding: 0.75rem 1.563rem;
+  border: none;
+  border-radius: 1.875rem;
+  color: white;
+  margin-top: 0.125rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.main-btn a {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+}
+
+.main-btn:hover {
+  background-color: #0073AA;
+  color: white;
+  border-radius: 1.875rem;
+  text-decoration: underline white;
+  filter: drop-shadow(0px 0px 16px #0073AA);
+  transition: all 0.4s ease-out;
+  transform: translate3d(0, 0, 0);
+}
+
+#main-image-id {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
