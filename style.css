@@ -1,12 +1,12 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* ------------------------------------------------------------ */
@@ -15,56 +15,119 @@ body {
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
 
-/* Sticky Navbar */
 .navbar {
-    position: fixed;
-    height: 70px;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    background-color: #fff; /* Adjust background color as needed */
-  }
-  
-  /* Responsive Navbar */
-  .navbar-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu-toggle {
-    display: none;
-  }
-
-  .navbar-links {
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-  
-  .fa-fish {
-    background: linear-gradient(90deg, #12d600, #00d334, #00ca6d, #00b9a3, #00a3c2, #008cc2, #007ab3, #0073aa);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    font-size: 2.75rem;
-    padding-top: 5px;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
+.navbar-container {
+  display: grid;
+  grid-template-columns: 0.2fr auto 1fr;
+  align-items: center;
+  height: 80px;
+  width: 80%;
+  max-width: 107.5rem;
+  margin: 0 auto;
+}
+
+#navbar-logo {
+  color: #0073AA;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  cursor: default;
+  text-decoration: none;
+  font-size: 2.75rem;
+  font-family: 'Itim', cursive;
+}
+
+#navbar-logo:hover {
+  color: #12d600;
+  transition: 0.4s ease;
+}
+
+.fa-fish {
+  background: linear-gradient(90deg, #12d600, #00d334, #00ca6d, #00b9a3, #00a3c2, #008cc2, #007ab3, #0073aa);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 2.75rem;
+  padding-top: 5px;
+}
+
+.navbar-menu {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  list-style: none;
+  text-align: center;
+  width: 80%;
+  justify-self: end;
+  margin-right: -2rem;
+  margin-top: 1.9rem;
+  height: 50px;
+}
+
+.navbar-links {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.navbar-links:hover {
+  transform: scale(1.075);
+  color: #0073AA;
+}
+
+.button {
+  color: white;
+  background: linear-gradient(90deg, #12d600, #00ce5a, #00c288, #00b5aa, #00a7bf, #0096c5, #0085bd, #0073aa);
+  text-decoration: none;
+  border-radius: 1.875rem;
+  font-size: 1rem;
+}
+
+#signup {
+  padding: 10px 21px;
+}
+
+#login {
+  padding: 10px 23px;
+}
+
+.button:hover {
+  border-radius: 1.875rem;
+  filter: drop-shadow(0px 0px 16px #0073AA);
+  text-decoration: underline white;
+  transition: all 0.4s ease-out;
+}
+
+.menu-toggle .bar {
+  width: 1.563rem;
+  height: 0.188rem;
+  margin: 0.313rem auto;
+  transition: all 0.4s ease-in-out;
+  background: black;
+}
+
+.highlight {
+  border-bottom: 4px solid #0073AA;
+}
+
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
-/* -------------- Main section classes ------------------------ */
+/* -------------- Home section classes ------------------------ */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
+
 .main {
   background-color: #f1f1f1;
 }
@@ -76,12 +139,13 @@ body {
   justify-self: center;
   width: 80%;
   margin: 0 auto;
-  height: 600px;
+  margin-top: -3rem;
+  height: 930px;
   background-color: #f1f1f1;
 }
 
 .main-text h1 {
-  font-size: 1.75rem;
+  font-size: 4rem;
   color: black;
   background-color: #f1f1f1;
 }
@@ -89,7 +153,7 @@ body {
 .main-text p {
   margin-top: 2.3rem;
   margin-bottom: 2.3rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: black;
   background-color: #f1f1f1;
 }
@@ -131,4 +195,408 @@ body {
   width: 100%;
   margin-bottom: 1rem;
   margin-left: 1rem;
+}
+
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------- How it works section classes ---------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+.service {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.service h1 {
+  color: black;
+  margin-bottom: 4rem;
+  margin-top: -3rem;
+  font-size: 2.5rem;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: white;
+  width: 80%;
+  justify-content: space-evenly;
+  height: 610px;
+}
+
+.service-content {  
+  margin: 10px;
+  height: 600px;
+  width: 370px;
+  border-color: #5cd466;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  transition: 0.3s ease-in;
+  background-color: #f1f1f1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*.service-content:hover {
+  transform: scale(1.075);
+  transition: 0.4s ease-in;
+  cursor: default;
+  filter: drop-shadow(0px 0px 3px #0073AA);
+}*/
+
+.service-content h2 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-decoration: underline #12d600;
+  text-underline-offset: 0.5rem;
+  color: black;
+  font-size: 2rem;
+}
+
+.service-content p {
+  text-align: left;
+}
+
+.service-content p {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.4rem;
+}
+
+.service-content img {
+  margin-bottom: 1rem;
+}
+
+#email-image {
+  height: 13rem;
+  width: 13rem;
+}
+
+#track-image {
+  height: 13rem;
+  width: 13rem;
+}
+
+#train-image {
+  height: 13rem;
+  width: 13rem;
+}
+
+#analyze-image {
+  height: 13rem;
+  width: 13rem;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------- Benefits section code ----------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+.benefits {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  height: 610px;
+  background-color: #f1f1f1;
+}
+
+.benefits h1 {
+  color: black;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  margin-top: -3rem;
+}
+
+.fa-check-circle {
+  color: #12d600;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.problem {
+  font-size: 2rem;
+}
+
+.benefits-list-header {
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+
+.benefits-bullet {
+  font-size: 1.75rem;
+}
+
+#benefits-image {
+  height: 95%;
+  width: 95%;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------- About us section code ----------------------- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+.aboutus {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.aboutus-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+  height: 540px;
+  background-color: white;
+  column-gap: 4rem;
+}
+
+.aboutus-text {
+  background-color: white;
+  height: 515px;
+}
+
+#team-label {
+  text-align: center;
+  font-size: 2rem;
+  color: #0073AA;
+}
+
+.team-names-container {
+  display: flex;
+  flex-grow: row;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.team-names {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-underline-offset: 0.5rem;
+  background-color: #f1f1f1;
+  padding: 10px 21px;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-names a {
+  text-decoration: underline #12d600;
+  color: black;
+}
+
+.team-names:hover {
+  transform: scale(1.075);
+  transition: 0.3s ease-in;
+  cursor: default;
+  filter: drop-shadow(0px 0px 3px #0073AA);
+}
+
+#team-paragraph {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+}
+
+.aboutus h1 {
+  color: black;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  margin-top: -3rem;
+}
+
+#cstate-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* -------------- Contact section code ------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+.contact {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 50px 0;
+}
+
+.contact-container {
+  width: 80%;
+  background: white;
+  border-radius: 6px;
+  padding: 30px 60px 40px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 3rem;
+}
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.contact-info::before {
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  background: #12d600;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fa-envelope {
+  font-size: 60px;
+  color: #0073AA;
+  margin-bottom: 10px;
+}
+
+.email-details {
+  text-align: center;
+  margin: 14px;
+}
+
+.email-title {
+  font-size: 18px;
+  font-weight: 500px;
+}
+
+.email-text {
+  font-size: 14px;
+  color: black
+}
+
+.contact-form {
+  width: 75%;
+  margin-left: 75px;
+  text-align: left;
+}
+
+.form-text {
+  font-size: 23px;
+  color: #0073AA;
+}
+
+.email-info {
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+
+
+.email-info input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.email-message textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+  min-height: 110px;
+  margin-top: 6px;
+}
+
+.email-send {
+  margin-top: 12px;
+  display: inline-block
+}
+
+.email-send input[type="submit"] {
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 10px 21px;
+  border-radius: 1.875rem;
+  background: linear-gradient(90deg, #12d600, #00ce5a, #00c288, #00b5aa, #00a7bf, #0096c5, #0085bd, #0073aa);
+  cursor: pointer;
+}
+
+.email-send input[type="submit"]:hover {
+  border-radius: 1.875rem;
+  filter: drop-shadow(0px 0px 16px #0073AA);
+  text-decoration: underline white;
+  transition: all 0.4s ease-out;
+}
+
+.email-clear input[type="reset"] {
+  color: #f1f1f1;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 10px 21px;
+  border-radius: 1.875rem;
+  background: linear-gradient(90deg, #12d600, #00ce5a, #00c288, #00b5aa, #00a7bf, #0096c5, #0085bd, #0073aa);
+  cursor: pointer;
+  margin-top: 0.75rem;
+}
+
+.email-clear input[type="reset"]:hover {
+  border-radius: 1.875rem;
+  filter: drop-shadow(0px 0px 16px #0073AA);
+  text-decoration: underline white;
+  transition: all 0.4s ease-out;
+}
+
+.email-buttons {
+  display: flex;
+  column-gap: 3rem;
 }
